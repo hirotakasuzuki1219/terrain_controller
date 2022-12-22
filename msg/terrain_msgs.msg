@@ -1,1 +1,1 @@
-float64[] terrain_heightmap_ros
+float32[] terrain_heightmap_ros
