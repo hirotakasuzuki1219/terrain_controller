@@ -5,13 +5,13 @@ from datetime import datetime
 
 def terrain_publisher():
     d = terrain_msgs()
-    d.terrain_heightmap_ros = [0] * 100
-    rate = rospy.Rate(10)
+    d.terrain_heightmap_ros = [0] * 1000000
+    rate = rospy.Rate(1)
     while not rospy.is_shutdown():
 
-        d.terrain_heightmap_ros[10]=1
-        d.terrain_heightmap_ros[20]=2
-        d.terrain_heightmap_ros[30]=3
+        d.terrain_heightmap_ros[10000]=1
+        d.terrain_heightmap_ros[20000]=2
+        d.terrain_heightmap_ros[30000]=3
         now = datetime.now()
 
         pub.publish(d)
